@@ -38,39 +38,23 @@ leapYears()
 // area = S(S − a)(S − b)(S − c)
 // where, S = ( a + b + c ) / 2
 // Calculate area of triangle using 2 functions
-// function lengthOfSides(){
-//     var a = +prompt("enter the value of A");
-//     var b = +prompt("Enter the value of B");
-//     var c = +prompt("Enter the value of C");
-// return [a, b,c]
-// }
 
-// function area (a,b,c){
-//     var s = (a+b+c) / 2
-//     var area2 = Math.sqrt(s* (s-a)*(s-b)*(s-c))
-// return area2
-// }
-// var sides  = lengthOfSides()
-// var area = area(sides[0], sides[1], sides[2]);
-// alert("The area of triangle is: "+ area.toFixed(2))
+document.write('<br>', "<h3>Area of triangle</h3>"); 
 
-
-function lengthOfSides(){
-  var a = +prompt("enter the value of A");
-  var b = +prompt("Enter the value of B");
-  var c = +prompt("Enter the value of C");
-  return [a, b, c];
+function calculateArea(a, b, c) {
+  var s = calculateS(a, b, c);
+  var area = Math.round(Math.sqrt(s * (s - a) * (s - b) * (s - c)));
+  return area;
 }
-
-function area (a,b,c){
-  var s = (a+b+c) / 2
-  var area2 = Math.sqrt(s* (s-a)*(s-b)*(s-c))
-  return area2
+function calculateS(a, b, c) {
+  var s = (a + b + c) / 2;
+  return s;
 }
-
-var sides  = lengthOfSides();
-var area = area(sides[0], sides[1], sides[2]);
-alert("The area of triangle is: "+ area.toFixed(2));
+var sideA = +prompt("Enter the triangle area side A")
+var sideB =  +prompt("Enter the triangle area side B")
+var sideC =  +prompt("Enter the triangle area side C")
+var triangleArea = calculateArea(sideA, sideB, sideC);
+document.write("Area of the triangle:", triangleArea);
 
 // 4. Write a function that receives marks received by a student in 3 
 // subjects and returns the average and percentage of these
@@ -224,6 +208,8 @@ function kmToMeters(km) {
 // worked above 40 hours. Assume that employees do not work 
 // for fractional part of an hour.
 
+document.write('<br>', "<h3>Over time pay</h3>"); 
+
 var hoursWorked = prompt("Enter hours worked by the employee:");
 var hourlyRate = prompt("Enter hourly rate of the employee:");
 
@@ -242,6 +228,8 @@ if (hoursWorked > 40) {
 // keyboard in hundreds, find the total number of currency notes 
 // of each denomination the cashier will have to give to the 
 // withdrawer
+
+document.write('<br>', "<h3>Currency notes</h3>"); 
 
 var amount = prompt("Enter amount to be withdrawn (in hundreds):");
 
