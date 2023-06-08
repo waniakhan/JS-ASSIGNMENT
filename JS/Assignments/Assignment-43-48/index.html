@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-43-48</title>
+</head>
+<body>
+    <!-- 1. Show an alert box on click on a link. -->
+    <h3>CLICK</h3>
+
+  <a href="https://www.bing.com/search?pglt=41&q=github&cvid=71cc479aaba64222a592bdbe5e9eb89f&aqs=edge.0.46j69i57j0j46j0l3j46j0.1559j0j1&FORM=ANNTA1&PC=U531" onClick=>Click</a>
+  <!-- 2. Display some Mobile images in browser. On click on an 
+  image Show the message in alert to user. -->
+  <h3>IMAGE ALERT</h3>
+
+  <img src="https://cdn.mos.cms.futurecdn.net/pVBWW4Xjmp3LUDZ5fwCBuX.jpg" onclick="alert('The fodable mobile phone ');" width="32%" height="300px" alt="" srcset="">
+  <img src="https://www.technologistan.pk/wp-content/uploads/2022/05/infinix-smart-hd-2021-2.jpg" onclick="alert('Infinix gallery ');" width="32%" height="300px" alt="" srcset="">
+  <img src="https://image-us.samsung.com/SamsungUS/pim/migration/mobile/phones/galaxy-s/sm-g928tzketmb/Pdpkeyfeature-sm-g928tzketmb-600x600-C1-062016.jpg" onclick="alert('Samsung Mobile phone ');" width="30%" height="300px" alt="" srcset="">
+
+  <!-- 3. Display 10 student records in table and each row should contain a delete 
+button. If you click on a button to delete a record, entire row should be 
+deleted.  -->
+<h3>DELETE ROW</h3>
+
+<table id="studentTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Roll No</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Kulsoom</td>
+      <td>34</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>Ariba</td>
+      <td>100</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>Shabana</td>
+      <td>2</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>Fabiha</td>
+      <td>5</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>Fareeda</td>
+      <td>10</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>Sarah</td>
+      <td>106</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>damesa</td>
+      <td>99</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
+<script>
+  function deleteRow(btn) {
+    var row = btn.closest('tr');
+    row.remove();
+  }
+  </script>
+ <!-- 4. Display an image in browser. Change the picture on mouseover and set the
+// first picture on mouseout. -->
+<h3>MOUSE OUT & OVER</h3>
+
+<img
+onMouseout="src='https://th.bing.com/th/id/R.f9205fb58f1c14f28ef572983b1ffb03?rik=DolpFD9a2M9wtQ&riu=http%3a%2f%2fcdn.christmaslightsetc.com%2fimages%2fProductCloseup%2f25048%2fA19-E26-socket-Transparent-Incandescent-yellow-party-sign-lamp-light-bulb-IMG_1480.jpg&ehk=2j5Bg1CFmr0ZBmDjxYi5l94pSY2UiuH4pj15GgEXgwk%3d&risl=&pid=ImgRaw&r=0'" 
+onMouseover="src='https://gratisownia.pl/images/products/300/5/MO7829_06.jpg'"
+ src="https://th.bing.com/th/id/R.f9205fb58f1c14f28ef572983b1ffb03?rik=DolpFD9a2M9wtQ&riu=http%3a%2f%2fcdn.christmaslightsetc.com%2fimages%2fProductCloseup%2f25048%2fA19-E26-socket-Transparent-Incandescent-yellow-party-sign-lamp-light-bulb-IMG_1480.jpg&ehk=2j5Bg1CFmr0ZBmDjxYi5l94pSY2UiuH4pj15GgEXgwk%3d&risl=&pid=ImgRaw&r=0"height="500px" alt="">
+
+ <!-- 5. Show a counter in browser. Counter should increase on click on increase 
+ button and decrease on click on decrease button. And show updated counter 
+ value in browser. -->
+  
+    <h1>Counter: <span id="counter">0</span></h1>
+    <button onclick="increase()">Increase</button>
+    <button onclick="decrease()">Decrease</button>
+  
+    <script>
+      var counterValue = 0;
+      var counterElement = document.getElementById("counter");
+  
+      function increase() {
+        counterValue++;
+        counterElement.innerHTML = counterValue;
+      }
+  
+      function decrease() {
+        counterValue--;
+        counterElement.innerHTML = counterValue;
+      }
+    </script>
+      
+  <!-- Assignment -43-48  -->
+    <script src="./app.js">
+    </script>
+</body>
+</html>
